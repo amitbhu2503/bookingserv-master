@@ -1,0 +1,17 @@
+{
+  "first_name" : "wsdf1",
+  "last_name": "Gupta",
+  "total_price":"1",
+  "deposit": "1",
+  "date_of_birth" : "2021-3-23",
+  "check_in": "2021-3-23 11:1:1",
+  "check_out": "2021-3-23 11:1:1",
+  "address": {
+    "line1": "test ",
+    "line2": "test ",
+    "city": "test ",
+    "state": "test ",
+    "country": "test ",
+    "zip_code": "test "
+  }
+}

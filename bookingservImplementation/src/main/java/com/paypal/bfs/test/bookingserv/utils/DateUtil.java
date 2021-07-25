@@ -4,7 +4,6 @@ import com.paypal.bfs.test.bookingserv.exceptions.BookingException;
 import org.springframework.http.HttpStatus;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

@@ -4,17 +4,19 @@ import com.paypal.bfs.test.bookingserv.api.model.Address;
 import com.paypal.bfs.test.bookingserv.api.model.Booking;
 import com.paypal.bfs.test.bookingserv.exceptions.BookingErrorEnum;
 import com.paypal.bfs.test.bookingserv.exceptions.BookingException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.awt.print.Book;
 import java.util.Date;
 
 @Component
+@Slf4j
 public class BookingValidations {
 
     public static void validateBookingRequest(Booking booking){
+        log.info("Validating request " + booking);
         // Validate booking params
         if(StringUtils.isEmpty(booking.getFirstName())){
             throw new BookingException(HttpStatus.BAD_REQUEST.value(), BookingErrorEnum.FIRST_NAME_EMPTY.getMessage(), BookingErrorEnum.FIRST_NAME_EMPTY.name());

@@ -9,22 +9,19 @@ import com.paypal.bfs.test.bookingserv.repository.BookingDao;
 import com.paypal.bfs.test.bookingserv.repository.BookingRepository;
 import com.paypal.bfs.test.bookingserv.utils.BookingValidations;
 import com.paypal.bfs.test.bookingserv.utils.DateUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
+
 
 @Service
+@Slf4j
 public class BookingResourceImpl implements BookingResource {
 
     @Autowired
@@ -32,6 +29,7 @@ public class BookingResourceImpl implements BookingResource {
 
     @Override
     public ResponseEntity<Booking> create(Booking booking) {
+        log.info("Processing booking resource request " + booking);
         // Validate Booking
         BookingValidations.validateBookingRequest(booking);
         // check for duplicate creation
@@ -56,6 +54,7 @@ public class BookingResourceImpl implements BookingResource {
 
     @Override
     public List<Booking> getAll() {
+        log.info("Processing get all booking request");
         Iterable<BookingEntity> bookingEntities = bookingRepository.findAll();
         List<Booking> results = new ArrayList<Booking>();
         bookingEntities.forEach((bookingEntitie)->{

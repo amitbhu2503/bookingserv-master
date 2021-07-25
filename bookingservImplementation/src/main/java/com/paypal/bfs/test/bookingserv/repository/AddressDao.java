@@ -3,7 +3,6 @@ package com.paypal.bfs.test.bookingserv.repository;
 import com.paypal.bfs.test.bookingserv.api.model.Address;
 import com.paypal.bfs.test.bookingserv.api.model.Booking;
 import com.paypal.bfs.test.bookingserv.entity.AddressEntity;
-import com.paypal.bfs.test.bookingserv.entity.BookingEntity;
 
 public class AddressDao {
 

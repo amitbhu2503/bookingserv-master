@@ -3,10 +3,8 @@ package com.paypal.bfs.test.bookingserv.entity;
 
 import com.paypal.bfs.test.bookingserv.api.model.Address;
 import com.paypal.bfs.test.bookingserv.api.model.Booking;
-import jdk.nashorn.internal.objects.annotations.Property;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -26,7 +24,6 @@ public class BookingEntity implements Serializable {
     private String firstName;
     private String lastName;
     private Date dateOfBirth;
-    @Column(name = "checkIn")
     private Date checkInTime;
     private Date checkOut;
     private Double totalPrice;
