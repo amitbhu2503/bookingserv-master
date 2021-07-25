@@ -1,0 +1,101 @@
+{
+  "title": "Booking resource",
+  "description": "Booking resource object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Booking id",
+      "type": "integer"
+    },
+    "first_name": {
+      "description": "First name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "last_name": {
+      "description": "Last name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "date_of_birth": {
+      "description": "Date of birth",
+      "type": "string"
+    },
+    "check_in": {
+      "description": "Checkin",
+      "type": "string"
+    },
+    "check_out": {
+      "description": "Checkout",
+      "type": "string"
+    },
+    "total_price": {
+      "description": "Total price",
+      "type": "string"
+    },
+    "deposit": {
+      "description": "Deposit",
+      "type": "string"
+    },
+    "address" :{
+      "title": "Address resource",
+      "description": "Address resource object",
+      "type": "object",
+      "properties": {
+        "line1": {
+          "description": "Address Line 1",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "line2": {
+          "description": "Address Line 2",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "city": {
+          "description": "City Name",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "state": {
+          "description": "State Name",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "country": {
+          "description": "Country Name",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "zip_code": {
+          "description": "Zip Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "first_name",
+        "last_name",
+        "date_of_birth",
+        "check_in",
+        "check_out",
+        "total_price",
+        "deposit",
+        "address"
+      ]
+    }
+  },
+  "required": [
+    "line1",
+    "city",
+    "state",
+    "country",
+    "zip_code"
+  ]
+}
